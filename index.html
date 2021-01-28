@@ -27,7 +27,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>Hello World</title>  
+	<!--sets and formats the title-->
+      <title>Cold or Allergies</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -36,25 +37,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+//JavaScript variable declaration and initialization
+	//allergy_count declares the variable and = 0 initializes at a value of 0
         var allergy_count = 0;
+	//cold_coount declares the variable and = 0 initializes at a value of 0
         var cold_count = 0;
 
-
+	//increases the value of allergy_count by 1 everytime the function is called upon
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
 
         }
-
+	//increases the value of cold_count by 1 everytime the function is called upon
         function coldAdd(){
             cold_count = cold_count + 1;
         }
 
-  </script>
+</script>
 
 
 
-<style>	
+<style>
 .body {
      margin: 0em;
 }
@@ -91,24 +95,79 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
 <div class="page" id="one">
+<!--HTML code for question 1-->
 	<div id="header" class="w3-container w3-flat-carrot">
+		<!--displays the question number at the top of the page-->
 		<h1>Question 1</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
+		<!--asks the question-->
+        	<p>Are your eyes watery or itchy?</p> 
+		<!--increases value of either allergy_count or cold_count by 1 dependent on yes or no-->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<!--codes for a button that allows you to go to next page-->
+		<a href="#two" class="w3-btn w3-black"> Go to Page Two </a>	
     	</div>
 </div>
 
 <div class="page" id="two">
+<!--HTML code for question 2-->
+
 	<div class="w3-container w3-flat-carrot">
+		<!--displays the question number at the top of the page-->
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
+		<!--asks the question-->
+		<p>Do you have a fever?</p>
+		<!--increases value of either allergy_count or cold_count by 1 dependent on yes or no-->
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<!--codes for a button that allows you to go to next page-->
+		<a href="#two" class="w3-btn w3-black"> Go to Page Three </a>	
 	</div>
 </div>	
+
+<div class="page" id="three">
+<!--HTML code for question 3-->
+	<div class="w3-container w3-flat-carrot">
+		<!--displays the question number at the top of the page-->
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<!--asks the question-->
+		<p>Do you have a sore throat?</p>
+		<!--increases value of either allergy_count or cold_count by 1 dependent on yes or no-->
+		a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<!--codes for a button that allows you to go to next page-->
+		<a href="#two" class="w3-btn w3-black"> Go to Page Four </a>	
+	</div>
+</div>	
+
+</div>	
+
+<div class="page" id="four">
+<!--HTML code for question 4-->
+	<div class="w3-container w3-flat-carrot">
+		<!--displays the question number at the top of the page-->
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<!--asks the question-->
+		<p>Are your symptoms seasonal or chronic?</p>
+		<!--increases value of either allergy_count or cold_count by 1 dependent on yes or no-->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<!--codes for a button that allows you to go to the results page-->
+		<a href="#two" class="w3-btn w3-black"> Go to Results </a>
+	</div>
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
